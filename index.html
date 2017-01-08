@@ -107,20 +107,21 @@
   var myColor1=new color.RGBAColor(10,145,128); 
   var myColor2=new color.RGBAColor (235,105,105); 
 c.fill(myColor1).addTo(stage).on('click', function (e){
-this.fill(myColor1.darker(.2)); 
-$(window).location.href="google.com"; 
+this.fill(myColor1.randomize()); 
+this.animate('3s',{x:500,y:650},{easing:'elasticOut'}); 
 }); 
 f.fill(myColor2).addTo(stage).on('click', function (e){
-this.fill(myColor2.darker(.2)); 
-$(window).location.href="google.com"; 
+this.fill(myColor2.randomize()); 
+this.animate('3s',{x:500, y:500},{easing:'bounceIn'}); 
 }); 
 g.fill(myColor1).addTo(stage).on('click', function (e){
-this.fill(myColor1.darker(.2)); 
-$(window).location.href="google.com";  
+this.fill(myColor1.randomize()); 
+this.animate('3s',{x:500,y:350},{easing:'elasticOut'}); 
+
 }); 
 e.fill(myColor2).addTo(stage).on('click', function (e){
-this.fill(myColor2.darker(.2)); 
-$(window).location.href="google.com"; 
+this.fill(myColor2.randomize()); 
+this.animate('3s',{x:350,y:500},{easing:'elasticOut'}); 
 
 
 }); 
