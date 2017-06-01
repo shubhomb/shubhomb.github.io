@@ -114,11 +114,13 @@ header{
 
   }
   #foot{
-    width:100%; 
+    width:95%; 
+    height:10%; 
   }
   footer#foot.container{
     padding-left:20%; 
     padding-right:12%; 
+      width:100%; 
   }
   #copyright{
     margin-top:1%; 
