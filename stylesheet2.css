@@ -141,9 +141,12 @@ header{
 
   }
 #headcontainer{
-    margin-left:7.5%;
-    margin-right:7.5%; 
+    width:90%; 
+    margin-left:5%; 
     
+}
+.navbar-brand{
+    font-size:220%; 
 }
   #icons{
     margin-bottom:0px; 
@@ -240,13 +243,12 @@ header{
   background-color: #e25714;
 }
 .nav navbar-nav navbar-right{
-    font-size:200%; 
+    font-size:140%; 
     position:relative;
     float:right; 
     
 }
 .nav navbar-nav navbar-left{
-    font-size:225%;
 }
 #header_ul {
     list-style-type: none;
