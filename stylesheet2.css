@@ -140,6 +140,11 @@ header{
       flex-wrap:nowrap; 
 
   }
+#headcontainer{
+    margin-left:7.5%;
+    margin-right:7.5%; 
+    
+}
   #icons{
     margin-bottom:0px; 
     margin-top:0.5%; 
@@ -235,9 +240,13 @@ header{
   background-color: #e25714;
 }
 .nav navbar-nav navbar-right{
+    font-size:200%; 
     position:relative;
     float:right; 
     
+}
+.nav navbar-nav navbar-left{
+    font-size:225%;
 }
 #header_ul {
     list-style-type: none;
