@@ -68,9 +68,9 @@ h1{
     vertical-align: left; 
 }
 nav {
-    margin-top: 28px; 
-    font-size: 150%; 
-    height:8%
+    margin-top: 1%; 
+    font-size: 175%; 
+    height:7%
 }
 a{
    text-decoration: none; 
@@ -233,6 +233,11 @@ header{
 
 .fa-google-plus:hover {
   background-color: #e25714;
+}
+.nav navbar-nav navbar-right{
+    position:relative;
+    float:right; 
+    
 }
 #header_ul {
     list-style-type: none;
