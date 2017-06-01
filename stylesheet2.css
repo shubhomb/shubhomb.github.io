@@ -70,6 +70,7 @@ h1{
 nav {
     margin-top: 28px; 
     font-size: 150%; 
+    height:8%
 }
 a{
    text-decoration: none; 
@@ -115,7 +116,7 @@ header{
   }
   #foot{
     width:95%; 
-    height:10%; 
+    height:7%; 
   }
   footer#foot.container{
     padding-left:10%; 
@@ -143,7 +144,6 @@ header{
     margin-bottom:0px; 
     margin-top:0.5%; 
     padding-top:0px; 
-    display:inline-block; 
   }
   .md:hover{
       padding-top:1px; 
@@ -159,6 +159,8 @@ header{
 }
 #social-icons{
     display:inline-block; 
+    position:relative; 
+}
 .fa-facebook:hover {
   background-color: #3d5b99;
 }
