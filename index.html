@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Shubhom</title>
+		 <meta charset="windows-1252">
+	     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	     <meta name="author" content ="Shubhom Bhattacharya">
+	     <meta name="keywords" content="shubhom, bhattacharya ">
+	     <link href="https://fonts.googleapis.com/css?family=Montserrat" 
+	        rel="stylesheet">
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	     <link rel="stylesheet" type="text/css" href="stylesheet2.css">
+	     <link rel="shortcut icon" href="http://i2.kym-cdn.com/entries/icons/square/000/001/347/stussy.jpg" > <!--title icon-->
+	     <!--<script type="text/javascript" src="C:/Users/Shubhom/shubhom.com/shubhom.js"></script>-->
+	     <!--<script src="jquery-3.1.1.min.js"></script>-->
+	     <script src="http://cdnjs.cloudflare.com/ajax/libs/bonsai/0.4/bonsai.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- Use Google JQuery CDN for faster cache loading -->
+		 <!--  <script src="landing_anim.js"</script> -->
+		
+
+			<!--Keep a static footer--> 
+		
+
+		<style>
+		#jumbo{
+      	padding-bottom:0;
+      	padding-top:0; 
+      	background-color:#00BFFF;
+
+      	background-size: cover;
+      	height:78%;
+      	color:white;
+      	display:flex;
+      	align-items:center;
+      }
+
+			
+
+      	.centerpage_sub{
+   		 position: absolute; 
+   		 left: 50%;
+   		 top: 55%;
+    	bottom: auto;
+    	right: auto;
+
+      }
+      .centerpage{
+    	position: absolute;
+    	left:40%;
+    	right:auto;
+    	top: 50%;
+    	bottom: auto;
+    }
+    #central{
+    	padding-left:20%; 
+      
+    }
+    #movie{
+    	height:100%; 
+    	width:100%; 
+    }
+
+	body {
+	padding: 0;
+	margin: 0;
+	}
+      </style>
+
+
+
+	     
+	</head>
+	
+
+	<body scroll="no" style="overflow: hidden">
+>
+    <nav class="navbar navbar-default navbar-fixed-top" id="navhead">
+  <div class="container" id="headcontainer">
+     <div class="navbar-header navbar-left">
+      <a class="navbar-brand" href="index.html">
+        <b>Shubhom.me</b>
+      </a>
+    </div>
+            <ul class="nav navbar-nav navbar-right">
+            <li id="head_elem"><a href="about.html">About</a></li>
+            <li id="head_elem"><a href="http://shubhomb.blogspot.com/">Blog</a></li>
+            <li id="head_elem"><a href="projects.html">Projects</a></li>
+      </div>
+    </nav>
+
+		<div class="jumbotron vertical-center" id="jumbo">
+			<div id="central">
+			<h1> Welcome to my site!</h1>
+      <h2>Take a look at what I'm up to</h2>
+			</div>
+
+			<div id="movie">
+			</div>
+			<script>
+			bonsai.run(document.getElementById('movie'),
+				{
+					code:function(){
+
+{
+  var evdim=400; 
+  var oddim=600; 
+  var g= new Circle (500, evdim, 60); 
+  var c = new Circle(500, oddim, 60);
+  var e= new Circle (evdim, 500, 60);
+  var f=new Circle (oddim, 500, 60); 
+  var myColor1=new color.RGBAColor(10,145,128); 
+  var myColor2=new color.RGBAColor (235,105,105); 
+c.fill(myColor1).addTo(stage).on('click', function (e){
+this.fill(myColor1.randomize()); 
+this.animate('3s',{x:500,y:650},{easing:'elasticOut'}); 
+}); 
+f.fill(myColor2).addTo(stage).on('click', function (e){
+this.fill(myColor2.randomize()); 
+this.animate('3s',{x:500, y:500},{easing:'bounceIn'}); 
+}); 
+g.fill(myColor1).addTo(stage).on('click', function (e){
+this.fill(myColor1.randomize()); 
+this.animate('3s',{x:500,y:350},{easing:'elasticOut'}); 
+
+}); 
+e.fill(myColor2).addTo(stage).on('click', function (e){
+this.fill(myColor2.randomize()); 
+this.animate('3s',{x:350,y:500},{easing:'elasticOut'}); 
+
+
+}); 
+
+
+
+
+c.animate(new KeyframeAnimation('3s', {
+  '0%': { x: 500, y: oddim},
+  '25%': { x: evdim, y: 500 },
+  '50%': { x: 500, y: evdim },
+  '75%':{x:oddim, y:500}, 
+  '100%':{x:500,y:oddim}, 
+}),{delay:'2s'});
+
+
+g.animate(new KeyframeAnimation('3s', {
+  '0%': { x: 500, y: evdim},
+  '25%': { x: oddim, y: 500 },
+  '50%': { x: 500, y: oddim },
+  '75%':{x:evdim, y:500}, 
+  '100%':{x:500,y:evdim}
+}));
+
+
+e.animate(new KeyframeAnimation('3s', {
+  '0%': { x: evdim, y: 500},
+  '25%': { x: 500, y: evdim },
+  '50%': { x: oddim, y: 500 },
+  '75%':{x:500, y:oddim}, 
+  '100%':{x:evdim,y:500}, 
+}));
+
+
+f.animate('3s', { fillColor: '#ff5d86', x:700, y:500}, {easing: 'sineInOut'});
+}
+
+function swagola(){
+  var length=20; 
+    var  x=Math.random()*1000; 
+   var  y=Math.random()*1000; 
+  for (i=0; i<40; i++){
+    new Path()
+  .moveTo(x, y)
+  .lineTo(x+length, y+length)
+  .lineTo(x+length+1, y+length+1)
+  .closePath()
+  .fill('random')
+  .addTo(stage);
+  }
+}
+swagola(); 
+/*
+var length=100; 
+for (i=0; i<40; i++){
+  var myColor=new color.RGBAColor ('red'); 
+
+ var arc= new Arc(500, 500, Math.random()*length, Math.random()*360, Math.random*360, false); 
+ arc.fill (myColor.randomize()); 
+ arc.animate(new KeyframeAnimation('5s',{
+  '0%':{x:500, y:500},
+  '100%':{x:Math.random()*1000, y:Math.random()*1000}, 
+ })); 
+}
+*/
+ 
+
+
+}}, {width:1000, height:1000});  
+
+			</script>
+
+		</div>
+
+		<div id="footer">
+
+		</div>
+
+	<!--Effects-->
+	     <script>
+	     $(document).ready(function (){
+	     	   	$("#jumbo").hide();
+	     	    $('#jumbo').fadeIn(2000);
+	     	    $("#footer").load("footer.html"); 
+				})
+		</script>
+	
+		
+			<footer class="container" id="foot">
+        <div class="row" id="social">
+            <h3 class="col-md-4" id="copyright" > Shubhom Bhattacharya, &copy;2017</h3>
+            <h3 class= "col-md-4"></h3>
+            <h3 class="col-md-4" id="icons"> 
+            <div class="social">
+                <ul class="social-icons">
+                  <li class="md"><a href="http://facebook.com/shubhomb" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+                  <li class="md"><a href="http://twitter.com/shubhomb" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+                  <li class="md"><a href="https://www.linkedin.com/in/shubhom" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+                  <li class="md"><a href="http://gmail.com" class="social-icon"> <i class="fa fa-google-plus"></i></a></li>
+                </ul>
+              </div>
+            </h3>
+            </div>
+            
+        </footer>
+		
+	</body>
+</html>
+
+
+
+
