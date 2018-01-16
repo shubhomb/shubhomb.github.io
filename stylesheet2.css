@@ -1,9 +1,4 @@
 /*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
     Created on : December 15, 2016, 6:49:59 PM
     Author     : Shubhom
 */
@@ -39,123 +34,50 @@ and open the template in the editor.
     to   { opacity: 1; }
 }
 
-
+#link{
+       text-decoration:underline;
+     }
 .html{
-    color:  slategrey;  
-    font-size:20px;
-    display: flex;
-    flex-wrap: wrap
+   color:  slategrey;
+   font-size: 140%;
+   display: flex;
+   flex-wrap: wrap
 
-     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+      -moz-animation: fadein 2s; /* Firefox < 16 */
+       -ms-animation: fadein 2s; /* Internet Explorer */
+        -o-animation: fadein 2s; /* Opera < 12.1 */
+           animation: fadein 2s;
 }
 
 body{
-  padding-top:2%; 
-    background-color: #00BFFF; 
-    background-repeat: no-repeat; 
-    font-family: 'Montserrat', sans-serif; 
+  padding-top:2%;
+    background-color: #00BFFF;
+    background-repeat: no-repeat;
+    font-family: 'Montserrat', sans-serif;
     color: slategrey;
     margin-left:auto;
-    margin-right:auto; 
-    width:100%; 
+    margin-right:auto;
+    width:100%;
 }
-h1{
-    color:black; 
-    vertical-align: left; 
-}
+
 nav {
-    margin-top: 1%; 
-    font-size: 225%; 
+    margin-top: 1%;
+    font-size: 225%;
     height:7%
-}
-a{
-   text-decoration: none; 
-   color: inherit; 
-   -o-transition:1.5s;
-  	-ms-transition:1.5s;
-  	-moz-transition:1.5s;
-  	-webkit-transition:1.5s;
-  	transition: 1.5s;
-    }
-a:hover{
-    color: white; 
-    text-decoration: none; 
-        }
-
-
-header{
-    margin-bottom: 0;
-    padding-bottom:0; 
-}
-
-
-  footer{
-      margin-top: 0%; 
-      margin-bottom: 0%; 
-      
-      display: inline-block; 
-      background-color: slategrey; 
-
-       position:fixed;
-   left:0px;
-   bottom:0px;
-   height:8%; 
-   width:100%;
-  }
-  h3{
-      color: slategrey; 
-      font-size: 180%;
-      padding-bottom: 10px; 
-      padding-top: 10px; 
-      
-
-  }
-  #foot{
-    width:95%; 
-    height:7%; 
-  }
-  footer#foot.container{
-    padding-left:10%; 
-    padding-right:6%; 
-      
-      width:100%; 
-  }
-  #copyright{
-    margin-top:1%; 
-    font-size: 20px; 
-    color:white; 
-  }
-  .md{
-      list-style: none;
-      padding: 1%; 
-      padding-top:0px; 
-      margin-top:0%; 
-      margin-left:10%; 
-      color: white; 
-      float:left;
-      flex-wrap:nowrap; 
-
-  }
-#headcontainer{
-    width:90%; 
-    margin-left:5%; 
-    
+    font-size: 100%;
 }
 .navbar-brand{
-    font-size:190%; 
-    padding-left:10%; 
+    font-size:190%;
+    padding-left:10%;
 }
   #icons{
-    margin-bottom:0px; 
-    margin-top:0.5%; 
-    padding-top:0px; 
+    margin-bottom:0%;
+    margin-top:0.5%;
+    padding-top:0%;
   }
   .md:hover{
-      padding-top:1px; 
+      padding-top:1px;
   }
   .fa-facebook {
   padding:10px 14px 7px 14px;
@@ -167,8 +89,8 @@ header{
     background-color: transparent;
 }
 #social-icons{
-    display:inline-block; 
-    position:relative; 
+    display:inline-block;
+    position:relative;
 }
 .fa-facebook:hover {
   background-color: #3d5b99;
@@ -243,30 +165,34 @@ header{
 .fa-google-plus:hover {
   background-color: #e25714;
 }
-.nav navbar-nav navbar-right{
-    font-size:140%; 
-    position:relative;
-    float:right; 
-    
+.navbar-right{
+    width: 40%;
+    font-size: 120%;
+    float:right;
+    position: relative;
+
 }
-.nav navbar-nav navbar-left{
+.navbar-left{
+  font-size:100%;
+  float:left;
+  position: absolute;
 }
 #header_ul {
     list-style-type: none;
-    margin: 3px; 
-    padding: 0%; 
+    margin: 0.5%;
+    padding: 0%;
 }
 #head{
   list-style-type: none;
-  float:left; 
-  margin:3px; 
+  float:left;
+  margin:1%;
 }
 #head_elem{
-  margin:3px; 
-  position:relative;  
+  margin:0.5%;
+  position:relative;
 }
 #head_elem:hover{
-    margin-right:30px;  
+    margin-right:30px;
    border-left: 2px solid black;
    -o-transition: 1s;
     -ms-transition:1s;
@@ -276,11 +202,88 @@ header{
 
 }
 #navhead{
-  margin-top:0%; 
-  padding-left:0%;  
-  background-color:#c6e2ff; 
+  margin-top:0%;
+  padding-left:0%;
+  background-color:#c6e2ff;
 }
- #link{
-        text-decoration:underline;
-      }
-     
+
+a{
+   text-decoration: none;
+   color: inherit;
+   -o-transition:1.5s;
+  	-ms-transition:1.5s;
+  	-moz-transition:1.5s;
+  	-webkit-transition:1.5s;
+  	transition: 1.5s;
+    }
+a:hover{
+    color: white;
+    text-decoration: none;
+        }
+
+
+header{
+    margin-bottom: 0%;
+    padding-bottom:0%;
+}
+
+
+  footer{
+      margin-top: 0%;
+      margin-bottom: 0%;
+
+      display: inline-block;
+      background-color: slategrey;
+
+       position:fixed;
+   left:0%;
+   bottom:0%;
+   height:8%;
+   width:100%;
+  }
+  h3{
+      color: slategrey;
+      font-size: 180%;
+      padding-bottom: 10px;
+      padding-top: 10px;
+
+
+  }
+  #foot{
+    width:95%;
+    height:7%;
+  }
+  footer#foot.container{
+    padding-left:10%;
+    padding-right:6%;
+
+      width:100%;
+  }
+  #copyright{
+    margin-top:1%;
+    font-size: 140%;
+    color:white;
+  }
+  .md{
+      list-style: none;
+      padding: 1%;
+      padding-top:0%;
+      margin-top:0%;
+      margin-left:10%;
+      color: white;
+      float:left;
+      flex-wrap:nowrap;
+
+  }
+
+  #headcontainer{
+      width:90%;
+      margin-left:5%;
+
+  }
+
+/*
+@media screen and (min-width: 800px) { The following CSS runs only for displays with a width (in pixels) of more than 800px
+}
+
+*/

@@ -6,7 +6,7 @@
 	     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	     <meta name="author" content ="Shubhom Bhattacharya">
 	     <meta name="keywords" content="shubhom, bhattacharya ">
-	     <link href="https://fonts.googleapis.com/css?family=Montserrat" 
+	     <link href="https://fonts.googleapis.com/css?family=Montserrat"
 	        rel="stylesheet">
 	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -15,63 +15,98 @@
 	     <!--<script type="text/javascript" src="C:/Users/Shubhom/shubhom.com/shubhom.js"></script>-->
 	     <!--<script src="jquery-3.1.1.min.js"></script>-->
 	     <script src="http://cdnjs.cloudflare.com/ajax/libs/bonsai/0.4/bonsai.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- Use Google JQuery CDN for faster cache loading -->
-		 <!--  <script src="landing_anim.js"</script> -->
-		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src='oriDomi/oridomi.min.js'></script>
 
-			<!--Keep a static footer--> 
-		
+		<!-- Use Google JQuery CDN for faster cache loading -->
+		 <!--  <script src="landing_anim.js"</script> -->
+
+
+			<!--Keep a static footer-->
+
 
 		<style>
 		#jumbo{
       	padding-bottom:0;
-      	padding-top:0; 
+      	padding-top:20%;
       	background-color:#00BFFF;
 
       	background-size: cover;
       	height:78%;
       	color:white;
+				width:100%;
       	display:flex;
       	align-items:center;
       }
+			.pics{
+				opacity:0.8;
+				border-radius:90%;
+			}
 
-			
 
-      	.centerpage_sub{
-   		 position: absolute; 
-   		 left: 50%;
-   		 top: 55%;
-    	bottom: auto;
-    	right: auto;
-
-      }
-      .centerpage{
-    	position: absolute;
-    	left:40%;
-    	right:auto;
-    	top: 50%;
-    	bottom: auto;
-    }
     #central{
-    	padding-left:20%; 
-      
+    	padding-left:18%%;
+			color:black;
+			display: block;
+	}
+
     }
     #movie{
-    	height:100%; 
-    	width:100%; 
+    	height:50%;
+    	width:50%;
+			z-index=-1; /*relevant if the movie falls in front of anything */
     }
 
 	body {
-	padding: 0;
-	margin: 0;
+	padding: 0%;
+	margin: 0%;
+	}
+
+
+	@media screen and (max-width: 900px) { /*The following CSS runs only for displays with a width (in pixels) of less than 800px*/
+	    body {
+	        background-color: #00BFFF;
+	    }
+	    #headcontainer{
+	      margin-bottom:5%;
+	      display:block;
+
+	    }
+	    .navbar-right{
+	        width: 40%;
+	        font-size: 100%;
+	        float:left;
+	        padding-top:10%;
+	        position: absolute;
+
+	    }
+	    .nav{
+				margin-top: 5%;
+	      font-size:100%;
+	      margin-bottom:5%;
+	    }
+	    #jumbo{
+	      height:60%;
+	      margin-top:5%;
+	      padding-top:35%;
+				width:80%;
+	    }
+
+	    .content{
+	      font-size:50%;
+	    }
+			.navbar-brand{
+				font-size: 120%;
+			}
+
 	}
       </style>
 
 
 
-	     
+
 	</head>
-	
+
 
 	<body scroll="no" style="overflow: hidden">
 >
@@ -90,136 +125,109 @@
     </nav>
 
 		<div class="jumbotron vertical-center" id="jumbo">
-			<div id="central">
+			<div class='container-fluid' id="central">
+				<div id='centraltext'>
 			<h1> Welcome to my site!</h1>
       <h2>Take a look at what I'm up to</h2>
+			<div class='container' id='stylizeme'>
+				<img src = 'me1.jpg' alt='deepart.io' style='width:20%; height:10%;' class='pics'id='pic1'>
+				<img src = 'me2.jpg' alt='deepart.io' style='width:20%; height:10%;'class='pics' id='pic2'>
+				<img src = 'me3.jpg'alt='deepart.io' style='width:20%; height:10%;' class='pics' id='pic3'>
+			</div>
 			</div>
 
-			<div id="movie">
 			</div>
-			<script>
-			bonsai.run(document.getElementById('movie'),
-				{
-					code:function(){
-
-{
-  var evdim=400; 
-  var oddim=600; 
-  var g= new Circle (500, evdim, 60); 
-  var c = new Circle(500, oddim, 60);
-  var e= new Circle (evdim, 500, 60);
-  var f=new Circle (oddim, 500, 60); 
-  var myColor1=new color.RGBAColor(10,145,128); 
-  var myColor2=new color.RGBAColor (235,105,105); 
-c.fill(myColor1).addTo(stage).on('click', function (e){
-this.fill(myColor1.randomize()); 
-this.animate('3s',{x:500,y:650},{easing:'elasticOut'}); 
-}); 
-f.fill(myColor2).addTo(stage).on('click', function (e){
-this.fill(myColor2.randomize()); 
-this.animate('3s',{x:500, y:500},{easing:'bounceIn'}); 
-}); 
-g.fill(myColor1).addTo(stage).on('click', function (e){
-this.fill(myColor1.randomize()); 
-this.animate('3s',{x:500,y:350},{easing:'elasticOut'}); 
-
-}); 
-e.fill(myColor2).addTo(stage).on('click', function (e){
-this.fill(myColor2.randomize()); 
-this.animate('3s',{x:350,y:500},{easing:'elasticOut'}); 
 
 
-}); 
-
-
-
-
-c.animate(new KeyframeAnimation('3s', {
-  '0%': { x: 500, y: oddim},
-  '25%': { x: evdim, y: 500 },
-  '50%': { x: 500, y: evdim },
-  '75%':{x:oddim, y:500}, 
-  '100%':{x:500,y:oddim}, 
-}),{delay:'2s'});
-
-
-g.animate(new KeyframeAnimation('3s', {
-  '0%': { x: 500, y: evdim},
-  '25%': { x: oddim, y: 500 },
-  '50%': { x: 500, y: oddim },
-  '75%':{x:evdim, y:500}, 
-  '100%':{x:500,y:evdim}
-}));
-
-
-e.animate(new KeyframeAnimation('3s', {
-  '0%': { x: evdim, y: 500},
-  '25%': { x: 500, y: evdim },
-  '50%': { x: oddim, y: 500 },
-  '75%':{x:500, y:oddim}, 
-  '100%':{x:evdim,y:500}, 
-}));
-
-
-f.animate('3s', { fillColor: '#ff5d86', x:700, y:500}, {easing: 'sineInOut'});
-}
-
-function swagola(){
-  var length=20; 
-    var  x=Math.random()*1000; 
-   var  y=Math.random()*1000; 
-  for (i=0; i<40; i++){
-    new Path()
-  .moveTo(x, y)
-  .lineTo(x+length, y+length)
-  .lineTo(x+length+1, y+length+1)
-  .closePath()
-  .fill('random')
-  .addTo(stage);
-  }
-}
-swagola(); 
-/*
-var length=100; 
-for (i=0; i<40; i++){
-  var myColor=new color.RGBAColor ('red'); 
-
- var arc= new Arc(500, 500, Math.random()*length, Math.random()*360, Math.random*360, false); 
- arc.fill (myColor.randomize()); 
- arc.animate(new KeyframeAnimation('5s',{
-  '0%':{x:500, y:500},
-  '100%':{x:Math.random()*1000, y:Math.random()*1000}, 
- })); 
-}
-*/
- 
-
-
-}}, {width:1000, height:1000});  
-
-			</script>
-
-		</div>
-
-		<div id="footer">
-
-		</div>
 
 	<!--Effects-->
 	     <script>
 	     $(document).ready(function (){
 	     	   	$("#jumbo").hide();
 	     	    $('#jumbo').fadeIn(2000);
-	     	    $("#footer").load("footer.html"); 
+	     	    $("#footer").load("footer.html");
+
 				})
 		</script>
-	
-		
+		<script>
+
+		(function() {
+			if (!OriDomi.isSupported) {
+				console.log('OriDomi not supported')
+				return;
+			}
+			else{
+				console.log('OriDomi is supported')
+
+			document.addEventListener('DOMContentLoaded', function() {
+				var demos, methods;
+
+				pic1 = 		new OriDomi(document.getElementById('pic1'), {
+						vPanels:         5,     // number of panels when folding left or right (vertically oriented)
+	  hPanels:         3,     // number of panels when folding top or bottom
+	  speed:           1200,  // folding duration in ms
+	  ripple:          2,     // backwards ripple effect when animating
+	  shadingIntesity: .5,    // lessen the shading effect
+	  perspective:     800,   // smaller values exaggerate 3D distortion
+	  maxAngle:        40,    // keep the user's folds within a range of -40 to 40 degrees
+	  shading:         'soft' // change the shading type
+	});
+				pic2 =	new OriDomi(document.getElementById('pic2'), {
+						vPanels:         5,     // number of panels when folding left or right (vertically oriented)
+				  hPanels:         3,     // number of panels when folding top or bottom
+				  speed:           1200,  // folding duration in ms
+				  ripple:          2,     // backwards ripple effect when animating
+				  shadingIntesity: .5,    // lessen the shading effect
+				  perspective:     800,   // smaller values exaggerate 3D distortion
+				  maxAngle:        40,    // keep the user's folds within a range of -40 to 40 degrees
+				  shading:         'soft' // change the shading type
+				});
+				pic3 = new OriDomi(document.getElementById('pic3'), {
+						vPanels:         5,     // number of panels when folding left or right (vertically oriented)
+		  hPanels:         3,     // number of panels when folding top or bottom
+		  speed:           1200,  // folding duration in ms
+		  ripple:          2,     // backwards ripple effect when animating
+		  shadingIntesity: .5,    // lessen the shading effect
+		  perspective:     800,   // smaller values exaggerate 3D distortion
+		  maxAngle:        40,    // keep the user's folds within a range of -40 to 40 degrees
+		  shading:         'soft' // change the shading type
+		});
+
+			 console.log('OriDomi objects made');
+
+
+				methods = ['accordion', 'stairs', 'curl', 'reveal', 'ramp', 'twist', 'fracture'];
+
+			 document.getElementById('pic1').addEventListener('click', function() {
+					// demos[n][method](method !== 'foldUp' ? angle : void 0);
+					pic1.reveal(20).wait(300).fracture(-30);
+					console.log('Pic1 clicked')
+				}, false);
+			 document.getElementById('pic2').addEventListener('click', function() {
+					pic2.accordion(30);
+					console.log('Pic2 clicked')
+				}, false);
+			 document.getElementById('pic3').addEventListener('click', function() {
+				 	pic3.accordion(-10);
+					// demos[n][method](method !== 'foldUp' ? angle : void 0);
+					console.log('Pic3 clicked')
+				}, false)
+				console.log('EventListeners created');
+				console.log(pic1);
+				console.log(pic2);
+				console.log(pic3);
+
+			});
+			return;
+		}}).call(this);
+		console.log('Self function called');
+</script>
+
 			<footer class="container" id="foot">
         <div class="row" id="social">
-            <h3 class="col-md-4" id="copyright" > Shubhom Bhattacharya, &copy;2017</h3>
+            <h3 class="col-md-4" id="copyright" > Shubhom Bhattacharya, &copy;2018</h3>
             <h3 class= "col-md-4"></h3>
-            <h3 class="col-md-4" id="icons"> 
+            <h3 class="col-md-4" id="icons">
             <div class="social">
                 <ul class="social-icons">
                   <li class="md"><a href="http://facebook.com/shubhomb" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
@@ -230,12 +238,8 @@ for (i=0; i<40; i++){
               </div>
             </h3>
             </div>
-            
+
         </footer>
-		
+
 	</body>
 </html>
-
-
-
-
