@@ -1,0 +1,25 @@
+{
+  "name": "shubhom.me",
+  "version": "1.0.0",
+  "description": "Hello and welcome to my personal site This is an experimental site that I'm using to delve into web development a bit. I'm also aiming to update it periodically for its functional purpose as a personal site.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shubhomb/shubhomb.github.io.git"
+  },
+  "keywords": [
+    "shubhom"
+  ],
+  "author": "Shubhom Bhattacharya",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/shubhomb/shubhomb.github.io/issues"
+  },
+  "homepage": "https://github.com/shubhomb/shubhomb.github.io#readme",
+  "dependencies": {
+    "animejs": "^2.2.0"
+  }
+}

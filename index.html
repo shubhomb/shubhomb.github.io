@@ -14,15 +14,10 @@
 	     <link rel="shortcut icon" href="http://i2.kym-cdn.com/entries/icons/square/000/001/347/stussy.jpg" > <!--title icon-->
 	     <!--<script type="text/javascript" src="C:/Users/Shubhom/shubhom.com/shubhom.js"></script>-->
 	     <!--<script src="jquery-3.1.1.min.js"></script>-->
-	     <script src="http://cdnjs.cloudflare.com/ajax/libs/bonsai/0.4/bonsai.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src='oriDomi/oridomi.min.js'></script>
-
-		<!-- Use Google JQuery CDN for faster cache loading -->
-		 <!--  <script src="landing_anim.js"</script> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!--JQuery-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
 
-			<!--Keep a static footer-->
 
 
 		<style>
@@ -43,7 +38,9 @@
 				border-radius:90%;
 			}
 
-
+			#stylizeme{
+				padding-left: 15%;
+			}
     #central{
     	padding-left:18%%;
 			color:black;
@@ -61,9 +58,30 @@
 	padding: 0%;
 	margin: 0%;
 	}
+	@media screen and (max-width:1320px) { /*The following CSS runs only for displays with a width (in pixels) <1300px and >900px*/
+		.nav{
+			position:absolute;
+			margin-left:50%;
+			font-size:100%;
+		}
+		#centertext{
+			padding-left:3%;
+			font-size:100%;
+		}
+		#head_elem{
+			color: white;
+			margin-bottom:10%;
+		}
+		.navbar-brand{
+			font-size: 130%;
+			padding-left:6%;
+		}
+		#foot{
+			padding-left:0%;
+		}
+	}
 
-
-	@media screen and (max-width: 900px) { /*The following CSS runs only for displays with a width (in pixels) of less than 800px*/
+	@media screen and (max-width: 1010px) { /*The following CSS runs only for displays with a width (in pixels) of less than 900px*/
 	    body {
 	        background-color: #00BFFF;
 	    }
@@ -77,26 +95,46 @@
 	        font-size: 100%;
 	        float:left;
 	        padding-top:10%;
+					color:white;
 	        position: absolute;
 
 	    }
 	    .nav{
 				margin-top: 5%;
-	      font-size:100%;
+	      font-size:120%;
+				font-weight:bold;
 	      margin-bottom:5%;
+
 	    }
+			#head_elem{
+				color: white;
+				margin-bottom:10%;
+			}
 	    #jumbo{
 	      height:60%;
 	      margin-top:5%;
 	      padding-top:35%;
 				width:80%;
 	    }
+			#center{
+				padding-left: 8%;
+				font-size: 10%;
+			}
+			#centraltext{
+				font-size:1%;
+				margin-left:0%;
+				padding-left: 0%;
+				display:none;
+			}
 
+			.pics{
+				padding-left:20%;
+			}
 	    .content{
 	      font-size:50%;
 	    }
 			.navbar-brand{
-				font-size: 120%;
+				font-size: 140%;
 			}
 
 	}
@@ -127,8 +165,11 @@
 		<div class="jumbotron vertical-center" id="jumbo">
 			<div class='container-fluid' id="central">
 				<div id='centraltext'>
+
+			<div id='centertext'>
 			<h1> Welcome to my site!</h1>
       <h2>Take a look at what I'm up to</h2>
+		</div>
 			<div class='container' id='stylizeme'>
 				<img src = 'me1.jpg' alt='deepart.io' style='width:20%; height:10%;' class='pics'id='pic1'>
 				<img src = 'me2.jpg' alt='deepart.io' style='width:20%; height:10%;'class='pics' id='pic2'>
@@ -150,78 +191,93 @@
 				})
 		</script>
 		<script>
+			var wh = $(window).height();   // returns height of browser viewport
+			var dh = $(document).height(); // returns height of HTML document (same as pageHeight in screenshot)
+			var ww = $(window).width();   // returns width of browser viewport
+			var dw = $(document).width(); // returns width of HTML document (same as pageWidth in screenshot)
+		</script>
 
-		(function() {
-			if (!OriDomi.isSupported) {
-				console.log('OriDomi not supported')
-				return;
-			}
-			else{
-				console.log('OriDomi is supported')
+		<script>
+		if (window.screen.availWidth>=900){
 
-			document.addEventListener('DOMContentLoaded', function() {
-				var demos, methods;
 
-				pic1 = 		new OriDomi(document.getElementById('pic1'), {
-						vPanels:         5,     // number of panels when folding left or right (vertically oriented)
-	  hPanels:         3,     // number of panels when folding top or bottom
-	  speed:           1200,  // folding duration in ms
-	  ripple:          2,     // backwards ripple effect when animating
-	  shadingIntesity: .5,    // lessen the shading effect
-	  perspective:     800,   // smaller values exaggerate 3D distortion
-	  maxAngle:        40,    // keep the user's folds within a range of -40 to 40 degrees
-	  shading:         'soft' // change the shading type
-	});
-				pic2 =	new OriDomi(document.getElementById('pic2'), {
-						vPanels:         5,     // number of panels when folding left or right (vertically oriented)
-				  hPanels:         3,     // number of panels when folding top or bottom
-				  speed:           1200,  // folding duration in ms
-				  ripple:          2,     // backwards ripple effect when animating
-				  shadingIntesity: .5,    // lessen the shading effect
-				  perspective:     800,   // smaller values exaggerate 3D distortion
-				  maxAngle:        40,    // keep the user's folds within a range of -40 to 40 degrees
-				  shading:         'soft' // change the shading type
-				});
-				pic3 = new OriDomi(document.getElementById('pic3'), {
-						vPanels:         5,     // number of panels when folding left or right (vertically oriented)
-		  hPanels:         3,     // number of panels when folding top or bottom
-		  speed:           1200,  // folding duration in ms
-		  ripple:          2,     // backwards ripple effect when animating
-		  shadingIntesity: .5,    // lessen the shading effect
-		  perspective:     800,   // smaller values exaggerate 3D distortion
-		  maxAngle:        40,    // keep the user's folds within a range of -40 to 40 degrees
-		  shading:         'soft' // change the shading type
+		var centertext = anime({
+			targets:  '#centertext',
+			translateX:200,
+			translateY:-100,
+
+			scale: {
+    value: 1.5,
+    duration: 1600,
+    delay: 800,
+    easing: 'easeInOutQuart'
+  		},
 		});
+		console.log("centertext works");
+	};
 
-			 console.log('OriDomi objects made');
+	var cssProperties = anime({
+	  targets: '.pics',
+	  opacity: .5,
+		translateX: -100,
+	  left: '240px',
+	  backgroundColor: '#FFF',
+	  borderRadius: ['0em', '8em'],
+	  easing: 'easeInOutQuad'
+	});
+				console.log("pics works");
 
 
-				methods = ['accordion', 'stairs', 'curl', 'reveal', 'ramp', 'twist', 'fracture'];
+		var pic1 = anime({
+					  targets: '#pic1',
+					  opacity: .5,
+						translateX: -100,
+					  left: '240px',
+						delay:1000,
+					  backgroundColor: '#FFF',
+					  borderRadius: ['0em', '8em'],
+					  easing: 'easeInOutQuad'
+					});
+								console.log("pic1 works");
 
-			 document.getElementById('pic1').addEventListener('click', function() {
-					// demos[n][method](method !== 'foldUp' ? angle : void 0);
-					pic1.reveal(20).wait(300).fracture(-30);
-					console.log('Pic1 clicked')
-				}, false);
-			 document.getElementById('pic2').addEventListener('click', function() {
-					pic2.accordion(30);
-					console.log('Pic2 clicked')
-				}, false);
-			 document.getElementById('pic3').addEventListener('click', function() {
-				 	pic3.accordion(-10);
-					// demos[n][method](method !== 'foldUp' ? angle : void 0);
-					console.log('Pic3 clicked')
-				}, false)
-				console.log('EventListeners created');
-				console.log(pic1);
-				console.log(pic2);
-				console.log(pic3);
+		var pic2 = anime({
+					  targets: '#pic2',
+					  opacity: .5,
+						translateX: -100,
+					  left: '240px',
+						delay:1200,
+					  backgroundColor: '#FFF',
+					  borderRadius: ['0em', '8em'],
+					  easing: 'easeInOutQuad'
+					});
+								console.log("pic2 works");
+		var pic3 = anime({
+						targets: '#pic3',
+						opacity: .5,
+						translateX: -100,
+						delay:1400,
+						left: '240px',
+						backgroundColor: '#FFF',
+						borderRadius: ['0em', '8em'],
+						easing: 'easeInOutQuad'
+					});
+								console.log("pic3 works");
 
-			});
-			return;
-		}}).call(this);
-		console.log('Self function called');
-</script>
+		if (window.screen.availWidth<=900){
+			var smallnav = anime({
+							targets: '.nav',
+							opacity: .5,
+							translateX: -100,
+							delay:1400,
+							left: '240px',
+							backgroundColor: '#FFF',
+							borderRadius: ['0em', '8em'],
+							easing: 'easeInOutQuad'
+						});
+									console.log("smallscreen works");
+									alert('shubhom.me is best viewed on a larger screen');
+		}
+		</script>
 
 			<footer class="container" id="foot">
         <div class="row" id="social">

@@ -190,6 +190,7 @@ nav {
 #head_elem{
   margin:0.5%;
   position:relative;
+  font-size:100%;
 }
 #head_elem:hover{
     margin-right:30px;
@@ -210,7 +211,7 @@ nav {
 a{
    text-decoration: none;
    color: inherit;
-   -o-transition:1.5s;
+   -o-transition:1.5s;f
   	-ms-transition:1.5s;
   	-moz-transition:1.5s;
   	-webkit-transition:1.5s;
