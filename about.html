@@ -214,42 +214,22 @@ position: relative;
   		$( function() {
     		$( "#accordion" ).accordion({collapsible:true});
   			} );
-
-			// 	var didScroll;
-			// 	$(window).scroll(function(event){
-			//   didScroll = true;
-			// });
-
-			// run hasScrolled() and reset didScroll status
-			// setInterval(function() {
-			//   if (didScroll) {
-			//     hasScrolled();
-			//     didScroll = false;
-			//   }
-			// }, 250);
-
-			// function hasScrolled(){
-			// 	var n = document.getElementById('headlist');
-			// 	if (hasScrolled){
-			// 			    n.style.display = "none";
-			// 				}
-			// 	else{
-			// 		n.style.display='block';
-			// 	}
-      //
-			// };
 		var isVisible = true;
 		$(window).scroll(function(){
-					if (window.screen.availWidth<=900){
+					 var shouldBeVisible = $(window).scrollTop()<6;
 						if (shouldBeVisible && !isVisible) {
+								if (window.screen.availWidth<=900){
 								isVisible = true;
 								$('#linklist').fadeIn('fast');
+							}
 					 }
 					 else if (isVisible && !shouldBeVisible) {
+						 	if (window.screen.availWidth<=900){
 								isVisible = false;
 								$('#linklist').fadeOut('fast');
-								}
-	 				}
+							}
+							}
+
 				});
 
  		 </script>
