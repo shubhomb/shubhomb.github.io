@@ -88,24 +88,14 @@
 	    #headcontainer{
 	      margin-bottom:5%;
 	      display:block;
-
 	    }
-	    .navbar-right{
-	        width: 40%;
-	        font-size: 100%;
-	        float:left;
-	        padding-top:10%;
-					color:white;
-	        position: absolute;
+			#linklist{
+				margin-left: 0%;
+				margin-top: 15%;
+				font-size: 120%;
+			}
 
-	    }
-	    .nav{
-				margin-top: 5%;
-	      font-size:120%;
-				font-weight:bold;
-	      margin-bottom:5%;
 
-	    }
 			#head_elem{
 				color: white;
 				margin-bottom:10%;
@@ -136,11 +126,13 @@
 			.navbar-brand{
 				font-size: 140%;
 			}
+			#linklist{
+				margin-left:0%;
+				margin-top:20%;
+			}
 
 	}
       </style>
-
-
 
 
 	</head>
@@ -155,7 +147,7 @@
         <b>Shubhom.me</b>
       </a>
     </div>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right" id = "linklist">
             <li id="head_elem"><a href="about.html">About</a></li>
             <li id="head_elem"><a href="https://mohbuhs.blogspot.com//">Blog</a></li>
             <li id="head_elem"><a href="https://shubhomb.blogspot.com/">Projects</a></li>
@@ -264,18 +256,18 @@
 								console.log("pic3 works");
 
 		if (window.screen.availWidth<=900){
-			var smallnav = anime({
-							targets: '.nav',
+			var small_menu = anime({
+							targets: '#linklist',
 							opacity: .5,
 							translateX: -100,
 							delay:1400,
 							left: '240px',
-							backgroundColor: '#FFF',
-							borderRadius: ['0em', '8em'],
+							elasticity: 200,
 							easing: 'easeInOutQuad'
 						});
-									console.log("smallscreen works");
-									alert('shubhom.me is best viewed on a larger screen');
+									console.log("pic3 works");
+						console.log("smallscreen works");
+						alert('Hi! shubhom.me is best viewed on a larger screen');
 		}
 		</script>
 
