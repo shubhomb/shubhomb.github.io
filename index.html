@@ -89,11 +89,7 @@
 	      margin-bottom:5%;
 	      display:block;
 	    }
-			#linklist{
-				margin-left: 0%;
-				margin-top: 15%;
-				font-size: 120%;
-			}
+
 
 
 			#head_elem{
@@ -258,14 +254,19 @@
 		if (window.screen.availWidth<=900){
 			var small_menu = anime({
 							targets: '#linklist',
-							opacity: .5,
-							translateX: -100,
+							translateY:{
+								value:-100,
+								duration: 800
+							},
+							scale: {
+						    value: 1.10,
+						    duration: 900,
+						    delay: 800,
+						    easing: 'easeInOutQuart'
+						  },
 							delay:1400,
-							left: '240px',
-							elasticity: 200,
 							easing: 'easeInOutQuad'
 						});
-									console.log("pic3 works");
 						console.log("smallscreen works");
 						alert('Hi! shubhom.me is best viewed on a larger screen');
 		}

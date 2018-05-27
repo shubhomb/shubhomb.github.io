@@ -168,8 +168,17 @@ position: relative;
 				background-color: #00BFFF;
 		}
 		#headcontainer{
-			display:inline-block;
+			margin-bottom:5%;
+			display:block;
+		}
+		#linklist{
+			margin-left:0%;
+			margin-top: 5%;
+		}
 
+		#head_elem{
+			color: white;
+			margin-bottom:10%;
 		}
 		.navbar-right{
 				width: 40%;
@@ -230,34 +239,37 @@ position: relative;
       //
 			// };
 		var isVisible = true;
-
 		$(window).scroll(function(){
-		     var shouldBeVisible = $(window).scrollTop()<50;
-		     if (shouldBeVisible && !isVisible) {
-		          isVisible = true;
-		          $('#headlist').fadeIn('fast');
-		     } else if (isVisible && !shouldBeVisible) {
-		          isVisible = false;
-		          $('#headlist').fadeOut('fast');
-		    }
-});
+					if (window.screen.availWidth<=900){
+						if (shouldBeVisible && !isVisible) {
+								isVisible = true;
+								$('#linklist').fadeIn('fast');
+					 }
+					 else if (isVisible && !shouldBeVisible) {
+								isVisible = false;
+								$('#linklist').fadeOut('fast');
+								}
+	 				}
+				});
+
  		 </script>
 	</head>
 	<!--No scroll HTML: scroll="no" style="overflow: hidden"-->
 	<body >
-       <nav class="navbar navbar-default navbar-fixed-top" id="navhead">
-  <div class="container" id="headcontainer">
-     <div class="navbar-header navbar-left">
-      <a class="navbar-brand" href="index.html">
-        <b>Shubhom.me</b>
-      </a>
-    </div>
-            <ul class="nav navbar-nav navbar-right" id="headlist">
-            <li id="head_elem"><a href="about.html">About</a></li>
-						<li id="head_elem"><a href="https://mohbuhs.blogspot.com//">Blog</a></li>
-						<li id="head_elem"><a href="https://shubhomb.blogspot.com/">Projects</a></li>
-      </div>
-    </nav>
+
+		    <nav class="navbar navbar-default navbar-fixed-top" id="navhead">
+		  <div class="container" id="headcontainer">
+		     <div class="navbar-header navbar-left">
+		      <a class="navbar-brand" href="index.html">
+		        <b>Shubhom.me</b>
+		      </a>
+		    </div>
+		            <ul class="nav navbar-nav navbar-right" id = "linklist">
+		            <li id="head_elem"><a href="about.html">About</a></li>
+		            <li id="head_elem"><a href="https://mohbuhs.blogspot.com//">Blog</a></li>
+		            <li id="head_elem"><a href="https://shubhomb.blogspot.com/">Projects</a></li>
+		      </div>
+		    </nav>
     			<div class="jumbotron" id="jumbo">
     			<div class="container" id="acc">
     			<div id="accordion">
