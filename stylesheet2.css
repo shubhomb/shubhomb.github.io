@@ -79,7 +79,7 @@ nav {
   .md:hover{
       padding-top:1px;
   }
-  .fa-facebook {
+  .fa-instagram {
   padding:10px 14px 7px 14px;
   -o-transition:.5s;
     -ms-transition:.5s;
@@ -92,8 +92,8 @@ nav {
     display:inline-block;
     position:relative;
 }
-.fa-facebook:hover {
-  background-color: #3d5b99;
+.fa-instagram:hover {
+  background-color: #D571DC;
 }
 
 .fa-twitter {
